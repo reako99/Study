@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>While</title>
+</head>
+<body>
+	<h1>자바스크립트 while문</h1>
+	<div id="output"></div>
+	
+	<script type="text/javascript">
+		var output = document.getElementById('output');
+		
+		// 2단 출력
+		var n = 1;
+		while(n < 10) {
+			output.innerHTML += '2 X ' + n + ' = ' + (2 * n) + '<br>';
+			n++;
+		}
+		
+		output.innerHTML += '<hr>';
+		
+		// 1. 구구단 출력 2 ~ 9단까지
+		for(var x = 2; x <= 9; x++) {
+			for(var y = 1; y <= 9; y++) {
+				output.innerHTML += x + ' X ' + y + ' = ' + (x * y) + '<br>';
+			}
+			output.innerHTML += '<hr>';
+		}
+
+		
+		
+		
+		
+	// 2. 별 출력
+	// ＊＊＊＊＊＊＊
+	// ＊＊　　　＊＊
+	// ＊　＊　＊　＊
+	// ＊　　＊　　＊
+	// ＊　＊　＊　＊
+	// ＊＊　　　＊＊
+	// ＊＊＊＊＊＊＊
+	for(var i = 0 ; i < 7 ; i++){
+		for(var j = 0 ; j < 7 ; j++){
+			if(i==0||j==0||i==6||j==6||i+j==6||i-j==0){
+			output.innerHTML +='*&nbsp';}else{
+				output.innerHTML +='&nbsp&nbsp';
+			}
+		}
+			output.innerHTML +='<br>';
+	}
+		
+	</script>
+</body>
+</html>
